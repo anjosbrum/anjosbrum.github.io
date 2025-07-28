@@ -1,0 +1,124 @@
+---
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+import type { Contact as Props } from '~/types';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+  {
+    (
+      <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="16e73534-bbae-43fe-979c-7b2282afa0b6" />
+          <input type="hidden" name="subject" value="Contacto através do site Anjos & Brum" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+          <div class="mb-6">
+            <label for="name" class="block text-sm font-medium">
+              Nome
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              required
+              oninvalid="this.setCustomValidity(this.title)"
+              oninput="this.setCustomValidity('')"
+              title="Por favor preencha o seu nome"
+              class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="block text-sm font-medium">
+              E-mail
+            </label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              required
+              oninvalid="this.setCustomValidity(this.title)"
+              oninput="this.setCustomValidity('')"
+              title="Por favor preencha o seu e-mail"
+              autocomplete="off"
+              class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="block text-sm font-medium">
+              Telefone
+            </label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              autocomplete="off"
+              placeholder="+351 123 123 123"
+              class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            />
+          </div>
+
+          <div>
+            <label for="textarea" class="block text-sm font-medium">
+              Mensagem
+            </label>
+            <textarea
+              id="textarea"
+              name="message"
+              autocomplete="off"
+              required
+              oninvalid="this.setCustomValidity(this.title)"
+              oninput="this.setCustomValidity('')"
+              title="Por favor preencha a sua mensagem"
+              rows={4}
+              class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            />
+          </div>
+
+          <div class="mt-3 flex items-start">
+            <div class="flex mt-0.5">
+              <input
+                id="disclaimer"
+                name="disclaimer"
+                type="checkbox"
+                required
+                oninvalid="this.setCustomValidity(this.title)"
+                oninput="this.setCustomValidity('')"
+                title="Por favor indique que leu e concorda com os termos"
+                class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              />
+            </div>
+            <div class="ml-3">
+              <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+                Ao enviar este formulário de contato, você reconhece e concorda com a coleta de suas informações
+                pessoais.
+              </label>
+            </div>
+          </div>
+
+          <div class="mt-10 grid">
+            <Button variant="primary" type="submit">
+              Enviar mensagem
+            </Button>
+          </div>
+        </form>
+      </div>
+    )
+  }
+</WidgetWrapper>

@@ -1,0 +1,67 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero tagline="Quem somos?">
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white">Anjos & Brum</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Consultoria jurídica e em tecnologia com agilidade e transparência. Soluções personalizadas em direito e
+      tecnologia, combinando expertise técnica e estratégica. Atendimento ágil, transparente e descomplicado para
+      empresas e startups.
+    </Fragment>
+  </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    tagline="Serviços"
+    title="No que podemos ajudar?"
+    subtitle="Conheça os principais serviços oferecidos pela Anjos & Brum"
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Abertura de Empresas',
+        description:
+          'Quer abrir a sua empresa com rapidez e segurança? A Anjos & Brum trata de todo o processo, desde o registo até à regularização fiscal, garantindo conformidade legal desde o primeiro dia. Evite burocracias e comece o seu negócio com o apoio de especialistas.',
+        icon: 'tabler:building-skyscraper',
+        callToAction: {
+          text: 'Contacte-nos e abra a sua empresa sem complicações!',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Visto para Imigrantes',
+        description:
+          'Precisa de regularizar a sua situação em Portugal? Oferecemos assessoria especializada em vistos de trabalho, residência e investimento, com orientação clara e processos simplificados. Tenha tranquilidade e segurança jurídica em cada etapa.',
+        icon: 'tabler:world-pin',
+        callToAction: {
+          text: 'Solicite o seu visto com quem conhece a legislação!',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Análise de Contratos',
+        description:
+          'Os seus contratos estão claros e protegidos? Realizamos uma análise técnica e jurídica detalhada para identificar riscos e salvaguardar os seus interesses. Evite surpresas e negocie com confiança.',
+        icon: 'tabler:zoom-check',
+        callToAction: {
+          text: 'Proteja os seus negócios com uma avaliação especializada!',
+          href: '/contact',
+        },
+      },
+    ]}
+  />
+</Layout>

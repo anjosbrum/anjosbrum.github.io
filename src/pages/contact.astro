@@ -1,0 +1,31 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Entre em contacto">
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white">No que podemos ajudar?</span>
+    </Fragment>
+  </HeroText>
+
+  <ContactUs
+    id="contact"
+    button="Enviar mensagem"
+    textarea={{
+      label: 'Mensagem',
+    }}
+    disclaimer={{
+      label:
+        'Ao enviar este formulário de contato, você reconhece e concorda com a coleta de suas informações pessoais.',
+    }}
+  />
+</Layout>

@@ -1,0 +1,68 @@
+site:
+  name: Anjos & Brum
+  site: 'https://www.anjosbrum.com'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Anjos & Brum
+    template: '%s — Anjos & Brum'
+  description: "Anjos & Brum - Consultoria jurídica e em TI com agilidade e transparência"
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Anjos & Brum
+    images:
+      - url: '~/assets/images/hero-image.png'
+        width: 1200
+        height: 628
+    type: website
+
+i18n:
+  language: pt
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: 'blog/%year%/%month%/%day%/%title%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%, %title%
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'categoria' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'topicos' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: false
+    relatedPostsCount: 0
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: "GTM-WTSDKNX3"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

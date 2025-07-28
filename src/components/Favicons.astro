@@ -1,0 +1,13 @@
+---
+import favIcon from '~/assets/favicons/favicon.ico';
+import favIconPng from '~/assets/favicons/favicon-96x96.png';
+import favIconSvg from '~/assets/favicons/favicon.svg';
+import appleTouchIcon from '~/assets/favicons/apple-touch-icon.png';
+import siteWebmanifest from '~/assets/favicons/site.webmanifest';
+---
+<link rel="icon" type="image/png" href={favIconPng.src} sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href={favIconSvg.src} />
+<link rel="shortcut icon" href={favIcon} />
+<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon.src} />
+<link rel="manifest" href={siteWebmanifest} />
+<link rel="mask-icon" href={favIconSvg.src} color="#8D46E7" />

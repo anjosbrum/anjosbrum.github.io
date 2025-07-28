@@ -1,0 +1,132 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import { Image } from 'astro:assets';
+import logoImage from '~/assets/images/hero-image.png';
+
+const metadata = {
+  title: 'Anjos & Brum - Consultoria jurídica e em TI com agilidade e transparência.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata} showLogo={false}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Fale conosco!',
+        href: '#contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    ,
+  >
+    <Fragment slot="title">
+      <!-- <span class="text-accent dark:text-white">Anjos & Brum</span> -->
+      <Image src={logoImage} alt="Anjos & Brum" />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Consultoria <span class="font-semibold">jurídica e em tecnologia</span> com agilidade e transparência.
+        <br />
+        Soluções personalizadas em direito e tecnologia, combinando expertise técnica e estratégica. Atendimento ágil, transparente
+        e descomplicado para empresas e startups.
+        <br />
+        Precisa de assessoria especializada?
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Filosia:" description="Agilidade, transparência e simplicidade" />
+
+  <!-- Features Widget *************** -->
+
+  <Features3
+    id="services"
+    tagline="Serviços"
+    title="No que podemos ajudar?"
+    subtitle="Conheça os principais serviços oferecidos pela Anjos & Brum"
+    columns={3}
+    items={[
+      {
+        title: 'Abertura de Empresas',
+        description:
+          'Quer abrir a sua empresa com rapidez e segurança? A Anjos & Brum trata de todo o processo, desde o registo até à regularização fiscal, garantindo conformidade legal desde o primeiro dia. Evite burocracias e comece o seu negócio com o apoio de especialistas.',
+        icon: 'tabler:building-skyscraper',
+        callToAction: {
+          text: 'Contacte-nos e abra a sua empresa sem complicações!',
+          href: '#contact',
+        },
+      },
+      {
+        title: 'Visto para Imigrantes',
+        description:
+          'Precisa de regularizar a sua situação em Portugal? Oferecemos assessoria especializada em vistos de trabalho, residência e investimento, com orientação clara e processos simplificados. Tenha tranquilidade e segurança jurídica em cada etapa.',
+        icon: 'tabler:world-pin',
+        callToAction: {
+          text: 'Solicite o seu visto com quem conhece a legislação!',
+          href: '#contact',
+        },
+      },
+      {
+        title: 'Análise de Contratos',
+        description:
+          'Os seus contratos estão claros e protegidos? Realizamos uma análise técnica e jurídica detalhada para identificar riscos e salvaguardar os seus interesses. Evite surpresas e negocie com confiança.',
+        icon: 'tabler:zoom-check',
+        callToAction: {
+          text: 'Proteja os seus negócios com uma avaliação especializada!',
+          href: '#contact',
+        },
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Conheça o blog da Anjos & Brum!"
+    information={`Fique por dentro das tendências em direito e TI, dicas práticas e análises especializadas. Conteúdo claro, relevante e atualizado para você se destacar no mercado.
+<br>
+<strong>Acesse agora e eleve seu conhecimento!</strong>
+                `}
+    linkText="Veja todos os artigos"
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <ContactUs
+    id="contact"
+    title="Entre em contacto"
+    button="Enviar mensagem"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nome',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Mensagem',
+    }}
+    disclaimer={{
+      label:
+        'Ao enviar este formulário de contato, você reconhece e concorda com a coleta de suas informações pessoais.',
+    }}
+  />
+</Layout>
