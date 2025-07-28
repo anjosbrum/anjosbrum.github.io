@@ -2,7 +2,7 @@
 publishDate: 2025-07-15T00:00:00Z
 title: 'Migrando para Astro'
 excerpt: 'Migrações, explosões e um arquivo .nojekyll! Aprendizado divertido e site top!'
-image: ~/assets/images/blog/migracao-para-astro.jpg
+image: ~/assets/images/blog/2025-07-15-migracao-para-astro.jpg
 category: 'Tecnologia'
 author: 'Diego Luiz Brum'
 tags: [migração, astro, site]

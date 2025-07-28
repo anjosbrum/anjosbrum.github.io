@@ -2,13 +2,13 @@
 publishDate: 2025-07-10T00:00:00Z
 title: 'Cibersegurança, criptomoedas e a arte de não cair em golpes'
 excerpt: 'Cibersegurança, criptomoedas e a arte de não cair em golpes: Um relato direto da trincheira digital'
-image: ~/assets/images/blog/cibersegurança-criptomoedas-e-a-arte-de-não-cair-em-golpes.jpg
+image: ~/assets/images/blog/2025-07-10-cibersegurança-criptomoedas-e-a-arte-de-não-cair-em-golpes.jpg
 category: 'Entrevistas'
 author: 'Flávia Victtor dos Anjos'
 tags: [direito, bitcoin, crimes digitais]
 ---
 
-Olá, pessoal! Sou Flávia dos Anjos, e hoje vou compartilhar com vocês um pouco da minha experiência recente como entrevistada em um papo sobre cibersegurança – um tema que, como vocês vão ver, está longe de ser só "coisa de filme de espionagem".
+Olá, pessoal! Sou Flávia Victtor dos Anjos, e hoje vou compartilhar com vocês um pouco da minha experiência recente como entrevistada em um papo sobre cibersegurança – um tema que, como vocês vão ver, está longe de ser só "coisa de filme de espionagem".
 
 ### **Quando o Banco Central vira alvo (e por que isso é assustador)**
 
