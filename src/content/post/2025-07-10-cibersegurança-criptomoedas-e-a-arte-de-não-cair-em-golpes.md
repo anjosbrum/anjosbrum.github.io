@@ -53,4 +53,5 @@ No fim das contas, um mundo digital seguro depende de cada um de nós. Vamos fic
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bEKU38Z1Qew?si=TzRSZ8IgW6oDY7tZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 **Flávia dos Anjos**  
+*Especialista em direito digital*  
 _(Enquanto isso, no mundo digital, continuo de olho nos hackers e nas startups que estão virando o jogo.)_

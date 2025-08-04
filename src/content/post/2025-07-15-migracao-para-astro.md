@@ -45,3 +45,6 @@ Pronto! Problema resolvido, site funcionando liso que só!
 E aí, curtiu a aventura? Se você já passou por algo parecido ou tá pensando em migrar pro Astro, conta aqui nos comentários! Vamos trocar ideias e rir juntos dos perrengues de dev. 😆  
 
 *PS: Nunca subestime o poder de um arquivo vazio!* 😉
+
+**Diego Luiz Brum**  
+*Especialista em tecnologia*  

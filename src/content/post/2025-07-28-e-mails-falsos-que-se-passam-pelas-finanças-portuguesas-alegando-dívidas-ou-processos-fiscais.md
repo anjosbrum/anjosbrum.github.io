@@ -30,7 +30,7 @@ Segundo o [Portal das Finanças](https://info.portaldasfinancas.gov.pt/pt/destaq
 
 As Finanças **nunca** solicitam pagamentos por e-mail sem aviso prévio no seu perfil oficial. Se houver dívidas, elas aparecerão no Portal ou serão comunicadas por carta registrada.  
 
-Fiquem espertos e espalhem essa informação! Se tiverem dúvidas, deixem nos comentários. 😊  
+Fiquem espertos e espalhem essa informação!
 
 **Flávia Victtor dos Anjos**  
 *Especialista em direito digital*  
